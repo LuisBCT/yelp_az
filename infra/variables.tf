@@ -1,7 +1,29 @@
 variable "storage_account_name" {
   description = "Nombre único del Storage Account"
   type = string
-  default = "stgyelpaz01" 
+  default = "styelpaz01" 
+}
+
+# Containers staging, bronze, silver, gold
+variable "container_staging_name" {
+  type = string
+  description = "Nombre del container staging"
+  default = "staging"
+}
+variable "container_bronze_name" {
+  type = string
+  description = "Nombre del container bronze"
+  default = "bronze"
+}
+variable "container_silver_name" {
+  type = string
+  description = "Nombre del container silver"
+  default = "silver"
+}
+variable "container_gold_name" {
+  type = string
+  description = "Nombre del container gold"
+  default = "gold"
 }
 
 # Variables para backend
