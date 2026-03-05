@@ -1,4 +1,11 @@
 # Virtual environment
 .venv/
-env/
-venv/
+
+# credenciales service principal
+.env
+credenciales.txt
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
