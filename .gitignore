@@ -4,3 +4,8 @@
 # credenciales service principal
 .env
 credenciales.txt
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
