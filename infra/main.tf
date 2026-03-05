@@ -16,22 +16,22 @@ resource "azurerm_storage_account" "stgyelpaz" {
 resource "azurerm_storage_container" "ystg"{
   name = var.container_staging_name
   storage_account_name = azurerm_storage_account.stgyelpaz.name
-  container_access_type = "Container"
+  container_access_type = "container"
 }
 resource "azurerm_storage_container" "ybr"{
   name = var.container_bronze_name
   storage_account_name = azurerm_storage_account.stgyelpaz.name
-  container_access_type = "Container"
+  container_access_type = "container"
 }
 resource "azurerm_storage_container" "ysv"{
   name = var.container_silver_name
   storage_account_name = azurerm_storage_account.stgyelpaz.name
-  container_access_type = "Container"
+  container_access_type = "container"
 }
 resource "azurerm_storage_container" "ygd"{
   name = var.container_gold_name
   storage_account_name = azurerm_storage_account.stgyelpaz.name
-  container_access_type = "Container"
+  container_access_type = "container"
 }
 
 # Storage Account para el tfstate
