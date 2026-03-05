@@ -10,7 +10,28 @@ resource "azurerm_storage_account" "stgyelpaz" {
   location = azurerm_resource_group.rg.location
   account_tier = "Standard"
   account_replication_type = "LRS"
+}
 
+# Containers stg, bronze, silver, gold
+resource "azurerm_storage_container" "ystg"{
+  name = var.container_staging_name
+  storage_account_name = azurerm_storage_account.stgyelpaz.name
+  container_access_type = "Container"
+}
+resource "azurerm_storage_container" "ybr"{
+  name = var.container_bronze_name
+  storage_account_name = azurerm_storage_account.stgyelpaz.name
+  container_access_type = "Container"
+}
+resource "azurerm_storage_container" "ysv"{
+  name = var.container_silver_name
+  storage_account_name = azurerm_storage_account.stgyelpaz.name
+  container_access_type = "Container"
+}
+resource "azurerm_storage_container" "ygd"{
+  name = var.container_gold_name
+  storage_account_name = azurerm_storage_account.stgyelpaz.name
+  container_access_type = "Container"
 }
 
 # Storage Account para el tfstate
