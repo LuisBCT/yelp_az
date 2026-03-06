@@ -57,3 +57,9 @@ variable "container_metastore_yelpaz_name" {
   description = "Nombre del container para el metastore"
   default = "metastoreyelpaz"
 }
+
+variable "client_id" {}
+variable "client_secret" {
+  sensitive = true
+}
+variable "tenant_id" {}

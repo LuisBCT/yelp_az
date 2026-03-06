@@ -26,3 +26,14 @@ resource "azurerm_role_assignment" "databricks_storage_access" {
   role_definition_name = "Storage Blob Data Contributor"
   principal_id         = azurerm_databricks_access_connector.access_connector.identity[0].principal_id
 }
+
+# Habilitar UC
+resource "databricks_metastore" "uc" {
+  name         = "yelpaz-metastore"
+  storage_root = "abfss://metastoreyelpaz@styelpaz01.dfs.core.windows.net/"
+  region       = "eastus"
+}
+resource "databricks_metastore_assignment" "workspace" {
+  workspace_id = azurerm_databricks_workspace.ws_yelpaz.workspace_id
+  metastore_id = databricks_metastore.uc.id
+}
