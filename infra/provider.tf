@@ -4,6 +4,10 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "~> 3.0"
     }
+    databricks = {
+      source  = "databricks/databricks"
+      version = "~> 1.30"
+    }
   }
 
   backend "azurerm" {
@@ -16,4 +20,12 @@ terraform {
 
 provider "azurerm" {
   features {}
+}
+
+provider "databricks" {
+  host = azurerm_databricks_workspace.ws_yelpaz.workspace_url
+
+  azure_client_id     = var.client_id
+  azure_client_secret = var.client_secret
+  azure_tenant_id     = var.tenant_id
 }
