@@ -38,3 +38,22 @@ variable "backend_container_name" {
   description = "Container dentro del Storage Account para el state"
   default = "tfstate"
 }
+
+### DATBRICKS VARIABLES
+
+variable "databricks_workspace_name" {
+  type = string
+  description = "Nombre del workspace de databricks"
+  default = "ws-yelpaz"
+}
+
+variable "databricks_access_connector_name" {
+  type = string
+  description = "Nombre access_connector de databricks para UC"
+  default = "ac-yelpaz-databricks"
+}
+variable "container_metastore_yelpaz_name" {
+  type = string
+  description = "Nombre del container bronze"
+  default = "metastore_yelpaz"
+}
