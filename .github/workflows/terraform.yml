@@ -22,9 +22,29 @@ jobs:
       - uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.14.6
-      - run: terraform init
-        working-directory: infra
-      - run: terraform plan -out=tfplan
-        working-directory: infra
-      - run: terraform apply -auto-approve tfplan
-        working-directory: infra
+      # ---------- INFRA AZURE ----------
+      - name: Terraform Init AZ
+        run: terraform init
+        working-directory: infra/infra_az
+
+      - name: Terraform Plan AZ
+        run: terraform plan -out=tfplan
+        working-directory: infra/infra_az
+
+      - name: Terraform Apply AZ
+        run: terraform apply -auto-approve tfplan
+        working-directory: infra/infra_az
+
+
+      # ---------- INFRA DATABRICKS ----------
+      - name: Terraform Init DB
+        run: terraform init
+        working-directory: infra/infra_databricks
+
+      - name: Terraform Plan DB
+        run: terraform plan -out=tfplan
+        working-directory: infra/infra_databricks
+
+      - name: Terraform Apply DB
+        run: terraform apply -auto-approve tfplan
+        working-directory: infra/infra_databricks
