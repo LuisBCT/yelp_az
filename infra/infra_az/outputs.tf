@@ -9,3 +9,7 @@ output "storage_account_primary_blob_endpoint" {
 output "databricks_workspace_url" {
   value = azurerm_databricks_workspace.ws_yelpaz.workspace_url
 }
+
+output "workspace_id" {
+  value = azurerm_databricks_workspace.ws_yelpaz.workspace_id
+}
