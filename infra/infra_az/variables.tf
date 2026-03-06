@@ -52,8 +52,9 @@ variable "databricks_access_connector_name" {
   description = "Nombre access_connector de databricks para UC"
   default = "ac-yelpaz-databricks"
 }
+
 variable "container_metastore_yelpaz_name" {
   type = string
   description = "Nombre del container para el metastore"
-  default = "metastore_yelpaz"
+  default = "metastoreyelpaz"
 }
