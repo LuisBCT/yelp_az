@@ -9,3 +9,11 @@ credenciales.txt
 *.tfstate
 *.tfstate.backup
 .terraform/
+
+# Airflow
+airflow/logs/
+airflow/config/
+airflow/.env
+
+# Python
+__pycache__/
