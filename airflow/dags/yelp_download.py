@@ -4,6 +4,8 @@ import requests
 import zipfile
 import tarfile
 import os
+from azure.storage.blob import BlobServiceClient
+from azure.identity import ClientSecretCredential
 
 data_dir = "/opt/airflow/yelp_data"
 zip_path = f"{data_dir}/yelp.zip"
@@ -48,7 +50,27 @@ def get_yelp_files():
     
     @task
     def upload_file(file_name):
-        print(f"cargando {file_name}")
+        account_name = "styelpaz01"
+        container_name = "staging"
+        file_path = f"{data_dir}/{file_name}"
+
+        credential = ClientSecretCredential(
+            tenant_id= ,#os.environ["AZURE_TENANT_ID"]
+            client_id= ,#os.environ["AZURE_CLIENT_ID"]
+            client_secret= #os.environ["AZURE_CLIENT_SECRET"]
+        )
+
+        blob_service_client = BlobServiceClient(account_url=f"https://{account_name}.blob.core.windows.net",
+                                credential=credential
+                            )
+        container_client = blob_service_client.get_container_client(container_name)
+        
+        with open(file_path, "rb") as data:
+            container_client.upload_blob(
+                name=file_name,
+                data=data,
+                overwrite=True
+            )
     
     zip_file_path = download_zip()
     tar_file_path = unzip_file(zip_file_path)
