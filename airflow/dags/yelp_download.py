@@ -55,9 +55,9 @@ def get_yelp_files():
         file_path = f"{data_dir}/{file_name}"
 
         credential = ClientSecretCredential(
-            tenant_id= ,#os.environ["AZURE_TENANT_ID"]
-            client_id= ,#os.environ["AZURE_CLIENT_ID"]
-            client_secret= #os.environ["AZURE_CLIENT_SECRET"]
+            tenant_id= os.environ["AZURE_TENANT_ID"],
+            client_id= os.environ["AZURE_CLIENT_ID"],
+            client_secret= os.environ["AZURE_CLIENT_SECRET"],
         )
 
         blob_service_client = BlobServiceClient(account_url=f"https://{account_name}.blob.core.windows.net",
