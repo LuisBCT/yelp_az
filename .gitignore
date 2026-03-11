@@ -17,3 +17,5 @@ airflow/.env
 
 # Python
 __pycache__/
+
+yelp_data/
