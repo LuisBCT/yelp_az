@@ -16,6 +16,7 @@ jobs:
       TF_VAR_client_id: ${{ secrets.ARM_CLIENT_ID }}           # convención automática para variables de entorno todas las variables que empiezan con TF_VAR_
       TF_VAR_client_secret: ${{ secrets.ARM_CLIENT_SECRET }}
       TF_VAR_tenant_id: ${{ secrets.ARM_TENANT_ID }}
+      TF_VAR_account_id: ${{ secrets.ARM_ACCOUNT_ID }}
 
     steps:
       - uses: actions/checkout@v3

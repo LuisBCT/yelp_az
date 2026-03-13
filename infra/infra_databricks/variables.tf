@@ -3,3 +3,4 @@ variable "client_secret" {
   sensitive = true
 }
 variable "tenant_id" {}
+variable "account_id" {}
