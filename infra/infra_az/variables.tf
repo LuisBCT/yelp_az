@@ -26,19 +26,6 @@ variable "container_gold_name" {
   default = "gold"
 }
 
-# Variables para backend
-variable "backend_storage_account_name" {
-  type = string
-  description = "Nombre del Storage Account para el backend de Terraform"
-  default = "tfstateyelpaz" 
-}
-
-variable "backend_container_name" {
-  type = string
-  description = "Container dentro del Storage Account para el state"
-  default = "tfstate"
-}
-
 ### DATBRICKS VARIABLES
 
 variable "databricks_workspace_name" {
