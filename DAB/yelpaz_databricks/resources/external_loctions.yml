@@ -7,3 +7,23 @@ resources:
       comment: external credential to yelpaz project for batch workflow - bronze
       grants:
         - principal: yelpaz_admins
+    
+    ext_silver_yelpaz:
+      name: ext_silver_yelpaz
+      url: abfss://silver@styelpaz01.dfs.core.windows.net/
+      credential_name: yelpaz-storage-cred
+      comment: external credential to yelpaz project for batch workflow - silver
+      grants:
+        - principal: yelpaz_admins
+          privileges:
+            - ALL_PRIVILEGES
+    
+    ext_gold_yelpaz:
+      name: ext_gold_yelpaz
+      url: abfss://gold@styelpaz01.dfs.core.windows.net/
+      credential_name: yelpaz-storage-cred
+      comment: external credential to yelpaz project for batch workflow - gold
+      grants:
+        - principal: yelpaz_admins
+          privileges:
+            - ALL_PRIVILEGES
