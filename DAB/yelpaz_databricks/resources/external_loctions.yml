@@ -1,0 +1,9 @@
+resources:
+  external_locations:
+    ext_bronze_yelpaz:
+      name: ext_bronze_yelpaz
+      url: abfss://bronze@styelpaz01.dfs.core.windows.net/
+      credential_name: yelpaz-storage-cred
+      comment: external credential to yelpaz project for batch workflow - bronze
+      grants:
+        - principal: yelpaz_admins

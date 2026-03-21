@@ -1,0 +1,44 @@
+name: Deploy Databricks Bundle
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+      DATABRICKS_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      DATABRICKS_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+      DATABRICKS_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+      DATABRICKS_BUNDLE_ENGINE: direct
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install Databricks CLI
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | sh
+          databricks --version
+
+      - name: Validate bundle
+        working-directory: DAB/yelpaz_databricks
+        run: |
+          databricks bundle validate
+
+      - name: Deploy to DEV
+        if: github.ref == 'refs/heads/develop'
+        working-directory: DAB/yelpaz_databricks
+        run: |
+          databricks bundle deploy -t dev
+
+      - name: Deploy to PROD
+        if: github.ref == 'refs/heads/main'
+        working-directory: DAB/yelpaz_databricks
+        run: |
+          databricks bundle deploy -t prod
