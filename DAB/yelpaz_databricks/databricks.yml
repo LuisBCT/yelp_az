@@ -41,3 +41,5 @@ targets:
     permissions:
       - user_name: luis-ct1997@outlook.com
         level: CAN_MANAGE
+      - service_principal_name: sp_yelpaz
+        level: CAN_MANAGE
