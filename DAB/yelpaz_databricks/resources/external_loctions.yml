@@ -15,8 +15,6 @@ resources:
       comment: external credential to yelpaz project for batch workflow - silver
       grants:
         - principal: yelpaz_admins
-          privileges:
-            - ALL_PRIVILEGES
     
     ext_gold_yelpaz:
       name: ext_gold_yelpaz
@@ -25,5 +23,3 @@ resources:
       comment: external credential to yelpaz project for batch workflow - gold
       grants:
         - principal: yelpaz_admins
-          privileges:
-            - ALL_PRIVILEGES
