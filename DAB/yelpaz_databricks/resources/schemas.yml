@@ -5,5 +5,34 @@ resources:
       grants:
         - principal: yelpaz_admins
           privileges:
-            - ALL_PRIVILEGES
+            - USE_SCHEMA
+            - SELECT
+            - MODIFY
+            - REFRESH
+            - CREATE_TABLE
+      catalog_name: ${var.catalog}
+    
+    silver:
+      name: silver
+      grants:
+        - principal: yelpaz_admins
+          privileges:
+            - USE_SCHEMA
+            - SELECT
+            - MODIFY
+            - REFRESH
+            - CREATE_TABLE
+      catalog_name: ${var.catalog}
+    
+    gold:
+      name: gold
+      grants:
+        - principal: yelpaz_admins
+          privileges:
+            - USE_SCHEMA
+            - SELECT
+            - MODIFY
+            - REFRESH
+            - CREATE_TABLE
+            - CREATE_MATERIALIZED_VIEW
       catalog_name: ${var.catalog}
