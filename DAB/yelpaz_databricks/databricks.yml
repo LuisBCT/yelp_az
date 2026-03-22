@@ -15,20 +15,19 @@ variables:
     description: The schema to use
 
 targets:
-  dev:
-    # The default target uses 'mode: development' to create a development copy.
-    # - Deployed resources get prefixed with '[dev my_user_name]'
-    # - Any job schedules and triggers are paused by default.
-    # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
-    mode: development
-    default: true
-    workspace:
-      host: https://adb-7405617917039953.13.azuredatabricks.net
-    variables:
-      catalog: yelpaz
-      schema: dev
-    presets:
-      artifacts_dynamic_version: true
+  # dev:
+  #   # The default target uses 'mode: development' to create a development copy.
+  #   # - Deployed resources get prefixed with '[dev my_user_name]'
+  #   # - Any job schedules and triggers are paused by default.
+  #   # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
+  #   mode: development
+  #   default: true
+  #   workspace:
+  #     host: https://adb-7405617917039953.13.azuredatabricks.net
+  #   variables:
+  #     catalog: yelpaz_${bundle.target}
+  #   presets:
+  #     artifacts_dynamic_version: true
   prod:
     mode: production
     workspace:
@@ -36,8 +35,7 @@ targets:
       # We explicitly deploy to /Workspace/Users/luis-ct1997@outlook.com to make sure we only have a single copy.
       root_path: /Workspace/Users/luis-ct1997@outlook.com/.bundle/${bundle.name}/${bundle.target}
     variables:
-      catalog: yelpaz
-      schema: prod
+      catalog: yelpaz_${bundle.target}
     permissions:
       - user_name: luis-ct1997@outlook.com
         level: CAN_MANAGE
