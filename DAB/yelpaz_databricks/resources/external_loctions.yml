@@ -8,9 +8,9 @@ resources:
       grants:
         - principal: yelpaz_admins
           privileges:
-            - READ FILES
-            - WRITE FILES
-            - CREATE EXTERNAL TABLE
+            - READ_FILES
+            - WRITE_FILES
+            - CREATE_EXTERNAL_TABLE
             - USAGE
 
     ext_bronze_yelpaz:
@@ -21,9 +21,9 @@ resources:
       grants:
         - principal: yelpaz_admins
           privileges:
-            - READ FILES
-            - WRITE FILES
-            - CREATE EXTERNAL TABLE
+            - READ_FILES
+            - WRITE_FILES
+            - CREATE_EXTERNAL_TABLE
             - USAGE
     
     ext_silver_yelpaz:
@@ -34,9 +34,9 @@ resources:
       grants:
         - principal: yelpaz_admins
           privileges:
-            - READ FILES
-            - WRITE FILES
-            - CREATE EXTERNAL TABLE
+            - READ_FILES
+            - WRITE_FILES
+            - CREATE_EXTERNAL_TABLE
             - USAGE
     
     ext_gold_yelpaz:
@@ -47,7 +47,7 @@ resources:
       grants:
         - principal: yelpaz_admins
           privileges:
-            - READ FILES
-            - WRITE FILES
-            - CREATE EXTERNAL TABLE
+            - READ_FILES
+            - WRITE_FILES
+            - CREATE_EXTERNAL_TABLE
             - USAGE
