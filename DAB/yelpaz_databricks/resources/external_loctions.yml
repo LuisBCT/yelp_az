@@ -7,6 +7,11 @@ resources:
       comment: external credential to yelpaz project for batch workflow - staging
       grants:
         - principal: yelpaz_admins
+          privileges:
+            - READ FILES
+            - WRITE FILES
+            - CREATE EXTERNAL TABLE
+            - USAGE
 
     ext_bronze_yelpaz:
       name: ext_bronze_yelpaz
@@ -15,6 +20,11 @@ resources:
       comment: external credential to yelpaz project for batch workflow - bronze
       grants:
         - principal: yelpaz_admins
+          privileges:
+            - READ FILES
+            - WRITE FILES
+            - CREATE EXTERNAL TABLE
+            - USAGE
     
     ext_silver_yelpaz:
       name: ext_silver_yelpaz
@@ -23,6 +33,11 @@ resources:
       comment: external credential to yelpaz project for batch workflow - silver
       grants:
         - principal: yelpaz_admins
+          privileges:
+            - READ FILES
+            - WRITE FILES
+            - CREATE EXTERNAL TABLE
+            - USAGE
     
     ext_gold_yelpaz:
       name: ext_gold_yelpaz
@@ -31,3 +46,8 @@ resources:
       comment: external credential to yelpaz project for batch workflow - gold
       grants:
         - principal: yelpaz_admins
+          privileges:
+            - READ FILES
+            - WRITE FILES
+            - CREATE EXTERNAL TABLE
+            - USAGE
