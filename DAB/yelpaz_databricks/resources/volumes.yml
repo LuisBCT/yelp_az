@@ -1,0 +1,7 @@
+resources:
+  volumes:
+    yelp_raw:
+      catalog_name: ${var.catalog}
+      name: yelp_raw
+      schema_name: staging
+      storage_location: abfss://staging@styelpaz01.dfs.core.windows.net/yelp/

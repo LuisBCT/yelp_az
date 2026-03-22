@@ -1,5 +1,19 @@
 resources:
   schemas:
+    staging:
+      name: staging
+      grants:
+        - principal: yelpaz_admins
+          privileges:
+            - USE_SCHEMA
+            - SELECT
+            - MODIFY
+            - REFRESH
+            - CREATE_TABLE
+            - CREATE_VOLUME
+            - WRITE_VOLUME
+      catalog_name: ${var.catalog}
+
     bronze:
       name: bronze
       grants:
