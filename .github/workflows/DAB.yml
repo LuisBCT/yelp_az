@@ -3,6 +3,7 @@ name: Deploy Databricks Bundle
 on:
   push:
     branches:
+      - develop
       - main
 
 permissions:

@@ -1,7 +1,7 @@
 resources:
   catalogs:
     yelp_batch:
-      name: yelp_batch
+      name: ${var.catalog}
       comment: 'Catalog created to explore yelp dataset '
       properties:
         purpose: 'Testing'
