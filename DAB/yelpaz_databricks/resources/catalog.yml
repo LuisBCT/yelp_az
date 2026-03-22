@@ -1,0 +1,12 @@
+resources:
+  catalogs:
+    yelp_batch:
+      name: yelp_batch
+      comment: 'Catalog created to explore yelp dataset '
+      properties:
+        purpose: 'Testing'
+      grants:
+        - principal: yelpaz_admins
+          privileges:
+            - USE_CATALOG
+            - CREATE_SCHEMA
