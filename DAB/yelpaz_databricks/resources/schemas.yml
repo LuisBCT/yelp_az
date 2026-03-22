@@ -1,0 +1,9 @@
+resources:
+  schemas:
+    silver:
+      name: silver
+      grants:
+        - principal: yelpaz_admins
+          privileges:
+            - ALL_PRIVILEGES
+      catalog_name: main
