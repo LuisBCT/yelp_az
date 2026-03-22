@@ -6,3 +6,7 @@ resources:
       schema_name: staging
       volume_type: EXTERNAL
       storage_location: abfss://staging@styelpaz01.dfs.core.windows.net/yelp/
+      grants:
+        - principal: yelpaz_admins
+          privileges:
+            - MANAGE
