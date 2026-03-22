@@ -12,6 +12,7 @@ resources:
             - CREATE_TABLE
             - CREATE_VOLUME
             - WRITE_VOLUME
+            - READ_VOLUME
       catalog_name: ${var.catalog}
 
     bronze:
