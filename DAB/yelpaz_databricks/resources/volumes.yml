@@ -1,7 +1,7 @@
 resources:
   volumes:
     yelp_raw:
-      catalog_name: ${var.catalog}
+      catalog_name: ${resources.catalogs.yelp_batch.name} #${var.catalog}
       name: yelp_raw
       schema_name: staging
       volume_type: EXTERNAL
