@@ -33,7 +33,7 @@ targets:
     workspace:
       host: https://adb-7405617917039953.13.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/luis-ct1997@outlook.com to make sure we only have a single copy.
-      root_path: /Workspace/Users/592762ba-ade9-495f-96ba-2a226efc6b23/${bundle.name}/${bundle.target} #/Workspace/Shared/yelp_az/${bundle.target} #/Workspace/Users/luis-ct1997@outlook.com/.bundle/${bundle.name}/${bundle.target} 
+      root_path: /Workspace/Users/592762ba-ade9-495f-96ba-2a226efc6b23/${bundle.name}/${bundle.target} #/Workspace/Users/luis-ct1997@outlook.com/.bundle/${bundle.name}/${bundle.target} 
     variables:
       catalog: yelpaz_${bundle.target}
     permissions:
@@ -41,3 +41,4 @@ targets:
         level: CAN_MANAGE
       - service_principal_name: 592762ba-ade9-495f-96ba-2a226efc6b23
         level: CAN_MANAGE
+    # /Workspace/Users/592762ba-ade9-495f-96ba-2a226efc6b23/${bundle.name}/${bundle.target} 

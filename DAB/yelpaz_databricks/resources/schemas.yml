@@ -14,7 +14,7 @@ resources:
             - WRITE_VOLUME
             - READ_VOLUME
             - MANAGE
-      catalog_name: ${var.catalog}
+      catalog_name: ${resources.catalogs.yelp_batch.name}
 
     bronze:
       name: bronze
@@ -27,7 +27,7 @@ resources:
             - REFRESH
             - CREATE_TABLE
             - MANAGE
-      catalog_name: ${var.catalog}
+      catalog_name: ${resources.catalogs.yelp_batch.name}
     
     silver:
       name: silver
@@ -40,7 +40,7 @@ resources:
             - REFRESH
             - CREATE_TABLE
             - MANAGE
-      catalog_name: ${var.catalog}
+      catalog_name: ${resources.catalogs.yelp_batch.name}
     
     gold:
       name: gold
@@ -54,4 +54,4 @@ resources:
             - CREATE_TABLE
             - CREATE_MATERIALIZED_VIEW
             - MANAGE
-      catalog_name: ${var.catalog}
+      catalog_name: ${resources.catalogs.yelp_batch.name}
