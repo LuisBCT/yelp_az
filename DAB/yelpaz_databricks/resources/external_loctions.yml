@@ -11,6 +11,7 @@ resources:
             - READ_FILES
             - WRITE_FILES
             - CREATE_EXTERNAL_TABLE
+            - MANAGE
 
     ext_bronze_yelpaz:
       name: ext_bronze_yelpaz
@@ -23,6 +24,7 @@ resources:
             - READ_FILES
             - WRITE_FILES
             - CREATE_EXTERNAL_TABLE
+            - MANAGE
     
     ext_silver_yelpaz:
       name: ext_silver_yelpaz
@@ -35,6 +37,7 @@ resources:
             - READ_FILES
             - WRITE_FILES
             - CREATE_EXTERNAL_TABLE
+            - MANAGE
     
     ext_gold_yelpaz:
       name: ext_gold_yelpaz
@@ -47,3 +50,4 @@ resources:
             - READ_FILES
             - WRITE_FILES
             - CREATE_EXTERNAL_TABLE
+            - MANAGE

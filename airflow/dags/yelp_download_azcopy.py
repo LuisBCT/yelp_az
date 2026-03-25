@@ -55,7 +55,7 @@ def get_yelp_files():
         set -x
 
         azcopy sync /opt/airflow/yelp_data \
-        "https://styelpaz01.blob.core.windows.net/staging" \
+        "https://styelpaz01.blob.core.windows.net/staging/yelp" \
         --recursive \
         --include-pattern="*.json"
         """
