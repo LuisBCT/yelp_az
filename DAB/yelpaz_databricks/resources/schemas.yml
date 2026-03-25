@@ -13,6 +13,7 @@ resources:
             - CREATE_VOLUME
             - WRITE_VOLUME
             - READ_VOLUME
+            - MANAGE
       catalog_name: ${var.catalog}
 
     bronze:
@@ -25,6 +26,7 @@ resources:
             - MODIFY
             - REFRESH
             - CREATE_TABLE
+            - MANAGE
       catalog_name: ${var.catalog}
     
     silver:
@@ -37,6 +39,7 @@ resources:
             - MODIFY
             - REFRESH
             - CREATE_TABLE
+            - MANAGE
       catalog_name: ${var.catalog}
     
     gold:
@@ -50,4 +53,5 @@ resources:
             - REFRESH
             - CREATE_TABLE
             - CREATE_MATERIALIZED_VIEW
+            - MANAGE
       catalog_name: ${var.catalog}
