@@ -33,7 +33,7 @@ targets:
     workspace:
       host: https://adb-7405617917039953.13.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/luis-ct1997@outlook.com to make sure we only have a single copy.
-      root_path: /Workspace/Users/luis-ct1997@outlook.com/.bundle/${bundle.name}/${bundle.target}
+      root_path: /Workspace/Shared/yelp_az/${bundle.target} #/Workspace/Users/luis-ct1997@outlook.com/.bundle/${bundle.name}/${bundle.target} # Deberia ser al shared
     variables:
       catalog: yelpaz_${bundle.target}
     permissions:

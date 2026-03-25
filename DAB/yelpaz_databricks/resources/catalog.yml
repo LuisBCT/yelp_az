@@ -10,3 +10,4 @@ resources:
           privileges:
             - USE_CATALOG
             - CREATE_SCHEMA
+            - MANAGE
